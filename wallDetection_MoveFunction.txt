@@ -1,0 +1,739 @@
+void move(int dir){
+//
+// TODO:
+// pac.x == -9 && pac.y == 92		<-- left teleport
+// pac.x == 128 && pac.y == 92	<-- right teleport
+//
+if(pac.x == 7 && pac.y == 152){
+	if(dir == up){
+		pac.y -= 1;
+	} else if(dir == right){
+		pac.x += 1;
+	} else {
+		// nothing
+	}
+} else if(7 < pac.x && pac.x < 24 && pac.y == 152){
+	if(dir == right){
+		pac.x += 1;
+	} else if(dir == left){
+		pac.x -= 1;
+	} else {
+		// nothing
+	}
+} else if(pac.x == 24 && pac.y == 152){
+	if(dir == up){
+		pac.y -= 1;
+	} else if(dir == right){
+		pac.x += 1;
+	} else if(dir == left){
+		pac.x -= 1;
+	} else {
+		// nothing
+	}
+} else if(24 < pac.x && pac.x < 47 && pac.y == 152){
+	if(dir == right){
+		pac.x += 1;
+	} else if(dir == left){
+		pac.x -= 1;
+	} else {
+		// nothing
+	}
+} else if(pac.x == 47 && pac.y == 152){
+	if(dir == up){
+		pac.y -= 1;
+	} else if(dir == right){
+		pac.x += 1;
+	} else if(dir == left){
+		pac.x -= 1;
+	} else {
+		// nothing
+	}
+} else if(47 < pac.x && pac.x < 72 && pac.y == 152){
+	if(dir == right){
+		pac.x += 1;
+	} else if(dir == left){
+		pac.x -= 1;
+	} else {
+		// nothing
+	}
+} else if(pac.x == 72 && pac.y == 152){
+	if(dir == up){
+		pac.y -= 1;
+	} else if(dir == right){
+		pac.x += 1;
+	} else if(dir == left){
+		pac.x -= 1;
+	} else {
+		// nothing
+	}
+} else if(72 < pac.x && pac.x < 96 && pac.y == 152){
+	if(dir == right){
+		pac.x += 1;
+	} else if(dir == left){
+		pac.x -= 1;
+	} else {
+		// nothing
+	}
+} else if(pac.x == 96 && pac.y == 152){
+	if(dir == up){
+		pac.y -= 1;
+	} else if(dir == right){
+		pac.x += 1;
+	} else if(dir == left){
+		pac.x -= 1;
+	} else {
+		// nothing
+	}
+} else if(96 < pac.x && pac.x < 112 && pac.y == 152){
+	if(dir == right){
+		pac.x += 1;
+	} else if(dir == left){
+		pac.x -= 1;
+	} else {
+		// nothing
+	}
+} else if(pac.x == 112 && pac.y == 152){
+	if(dir == up){
+		pac.y -= 1;
+	} else if(dir == left){
+		pac.x -= 1;
+	} else {
+		// nothing
+	}
+} else if(pac.x == 112 && 117 < pac.y && pac.y < 152){
+	if(dir == up){
+		pac.y -= 1;
+	} else if(dir == down){
+		pac.y += 1;
+	} else {
+		// nothing
+	}
+} else if(pac.x == 112 && pac.y == 117){
+	if(dir == down){
+		pac.y += 1;
+	} else if(dir == left){
+		pac.x -= 1;
+	} else {
+		// nothing
+	}
+} else if(99 < pac.x && pac.x < 112 && pac.y == 117){
+	if(dir == right){
+		pac.x += 1;
+	} else if(dir == left){
+		pac.x -= 1;
+	} else {
+		// nothing
+	}
+} else if(pac.x == 99 && pac.y == 117){
+	if(dir == up){
+		pac.y -= 1;
+	} else if(dir == right){
+		pac.x += 1;
+	} else if(dir == left){
+		pac.x -= 1;
+	} else {
+		// nothing
+	}
+} else if(81 < pac.x && pac.x < 99 && pac.y == 117){
+	if(dir == right){
+		pac.x += 1;
+	} else if(dir == left){
+		pac.x -= 1;
+	} else {
+		// nothing
+	}
+} else if(pac.x == 81 && pac.y == 117){
+	if(dir == up){
+		pac.y -= 1;
+	} else if(dir == down){
+		pac.y += 1;
+	} else if(dir == right){
+		pac.x += 1;
+	} else {
+		// nothing
+	}
+} else if(pac.x == 38 && pac.y == 117){
+	if(dir == up){
+		pac.y -= 1;
+	} else if(dir == down){
+		pac.y += 1;
+	} else if(dir == left){
+		pac.x -= 1;
+	} else {
+		// nothing
+	}
+} else if(20 < pac.x && pac.x < 38 && pac.y == 117){
+	if(dir == right){
+		pac.x += 1;
+	} else if(dir == left){
+		pac.x -= 1;
+	} else {
+		// nothing
+	}
+} else if(pac.x == 20 && pac.y == 117){
+	if(dir == up){
+		pac.y -= 1;
+	} else if(dir == right){
+		pac.x += 1;
+	} else if(dir == left){
+		pac.x -= 1;
+	} else {
+		// nothing
+	}
+} else if(7 < pac.x && pac.x < 20 && pac.y == 117){
+	if(dir == right){
+		pac.x += 1;
+	} else if(dir == left){
+		pac.x -= 1;
+	} else {
+		// nothing
+	}
+} else if(pac.x == 7 && pac.y == 117){
+	if(dir == right){
+		pac.x += 1;
+	} else if(dir == down){
+		pac.y += 1;
+	} else {
+		// nothing
+	}
+} else if(pac.x == 7 && 117 < pac.y && pac.y < 152){
+	if(dir == up){
+		pac.y -= 1;
+	} else if(dir == down){
+		pac.y += 1;
+	} else {
+		// nothing
+	}
+} else if(pac.x == 7 && pac.y == 31){
+	if(dir == right){
+		pac.x += 1;
+	} else if(dir == down){
+		pac.y += 1;
+	} else {
+		// nothing
+	}
+} else if(pac.x == 47 && pac.y == 31){
+	if(dir == left){
+		pac.x -= 1;
+	} else if(dir == down){
+		pac.y += 1;
+	} else {
+		// nothing
+	}
+} else if(pac.x == 47 && pac.y == 47){
+	if(dir == up){
+		pac.y -= 1;
+	} else if(dir == right){
+		pac.x += 1;
+	} else if(dir == left){
+		pac.x -= 1;
+	} else {
+		// nothing
+	}
+} else if(pac.x == 72 && pac.y == 47){
+	if(dir == up){
+		pac.y -= 1;
+	} else if(dir == right){
+		pac.x += 1;
+	} else if(dir == left){
+		pac.x -= 1;
+	} else {
+		// nothing
+	}
+} else if(pac.x == 72 && pac.y == 31){
+	if(dir == right){
+		pac.x += 1;
+	} else if(dir == down){
+		pac.y += 1;
+	} else {
+		// nothing
+	}
+} else if(pac.x == 72 && pac.y == 65){
+	if(dir == right){
+		pac.x += 1;
+	} else if(dir == down){
+		pac.y += 1;
+	} else {
+		// nothing
+	}
+} else if(pac.x == 38 && pac.y == 79){
+	if(dir == right){
+		pac.x += 1;
+	} else if(dir == down){
+		pac.y += 1;
+	} else {
+		// nothing
+	}
+} else if(pac.x == 99 && pac.y == 69){
+	if(dir == right){
+		pac.x += 1;
+	} else if(dir == down){
+		pac.y += 1;
+	} else {
+		// nothing
+	}
+} else if(pac.x == 112 && pac.y == 31){
+	if(dir == left){
+		pac.x -= 1;
+	} else if(dir == down){
+		pac.y += 1;
+	} else {
+		// nothing
+	}
+} else if(pac.x == 47 && pac.y == 65){
+	if(dir == left){
+		pac.x -= 1;
+	} else if(dir == down){
+		pac.y += 1;
+	} else {
+		// nothing
+	}
+} else if(pac.x == 95 && pac.y == 131){
+	if(dir == left){
+		pac.x -= 1;
+	} else if(dir == down){
+		pac.y += 1;
+	} else {
+		// nothing
+	}
+} else if(pac.x == 24 && pac.y == 131){
+	if(dir == right){
+		pac.x += 1;
+	} else if(dir == down){
+		pac.y += 1;
+	} else {
+		// nothing
+	}
+} else if(pac.x == 20 && pac.y == 67){
+	if(dir == left){
+		pac.x -= 1;
+	} else if(dir == down){
+		pac.y += 1;
+	} else {
+		// nothing
+	}
+} else if(pac.x == 81 && pac.y == 79){
+	if(dir == left){
+		pac.x -= 1;
+	} else if(dir == down){
+		pac.y += 1;
+	} else {
+		// nothing
+	}
+} else if(pac.x == 20 && pac.y == 92){
+	if(dir == left){
+		pac.x -= 1;
+	} else if(dir == right){
+		pac.x += 1;
+	} else if(dir == up){
+		pac.y -= 1;
+	} else if(dir == down){
+		pac.y += 1;
+	}
+} else if(pac.x == 99 && pac.y == 92){
+	if(dir == left){
+		pac.x -= 1;
+	} else if(dir == right){
+		pac.x += 1;
+	} else if(dir == up){
+		pac.y -= 1;
+	} else if(dir == down){
+		pac.y += 1;
+	}
+} else if(pac.x == 38 && pac.y == 131){
+	if(dir == left){
+		pac.x -= 1;
+	} else if(dir == right){
+		pac.x += 1;
+	} else if(dir == up){
+		pac.y -= 1;
+	} else {
+		// nothing
+	}
+} else if(pac.x == 81 && pac.y == 131){
+	if(dir == left){
+		pac.x -= 1;
+	} else if(dir == right){
+		pac.x += 1;
+	} else if(dir == up){
+		pac.y -= 1;
+	} else {
+		// nothing
+	}
+} else if(pac.x == 72 && pac.y == 79){
+	if(dir == left){
+		pac.x -= 1;
+	} else if(dir == right){
+		pac.x += 1;
+	} else if(dir == up){
+		pac.y -= 1;
+	} else {
+		// nothing
+	}
+} else if(pac.x == 47 && pac.y == 79){
+	if(dir == left){
+		pac.x -= 1;
+	} else if(dir == right){
+		pac.x += 1;
+	} else if(dir == up){
+		pac.y -= 1;
+	} else {
+		// nothing
+	}
+} else if(pac.x == 38 && pac.y == 47){
+	if(dir == left){
+		pac.x -= 1;
+	} else if(dir == right){
+		pac.x += 1;
+	} else if(dir == down){
+		pac.y += 1;
+	} else {
+		// nothing
+	}
+} else if(pac.x == 81 && pac.y == 47){
+	if(dir == left){
+		pac.x -= 1;
+	} else if(dir == right){
+		pac.x += 1;
+	} else if(dir == down){
+		pac.y += 1;
+	} else {
+		// nothing
+	}
+} else if(pac.x == 47 && pac.y == 131){
+	if(dir == left){
+		pac.x -= 1;
+	} else if(dir == right){
+		pac.x += 1;
+	} else if(dir == down){
+		pac.y += 1;
+	} else {
+		// nothing
+	}
+} else if(pac.x == 72 && pac.y == 131){
+	if(dir == left){
+		pac.x -= 1;
+	} else if(dir == right){
+		pac.x += 1;
+	} else if(dir == down){
+		pac.y += 1;
+	} else {
+		// nothing
+	}
+} else if(pac.x == 112 && pac.y == 47){
+	if(dir == left){
+		pac.x -= 1;
+	} else if(dir == up){
+		pac.y -= 1;
+	} else if(dir == down){
+		pac.y += 1;
+	} else {
+		// nothing
+	}
+} else if(pac.x == 38 && pac.y == 92){
+	if(dir == left){
+		pac.x -= 1;
+	} else if(dir == up){
+		pac.y -= 1;
+	} else if(dir == down){
+		pac.y += 1;
+	} else {
+		// nothing
+	}
+} else if(pac.x == 81 && pac.y == 104){
+	if(dir == left){
+		pac.x -= 1;
+	} else if(dir == up){
+		pac.y -= 1;
+	} else if(dir == down){
+		pac.y += 1;
+	} else {
+		// nothing
+	}
+} else if(pac.x == 39 && pac.y == 104){
+	if(dir == right){
+		pac.x += 1;
+	} else if(dir == up){
+		pac.y -= 1;
+	} else if(dir == down){
+		pac.y += 1;
+	} else {
+		// nothing
+	}
+} else if(pac.x == 81 && pac.y == 92){
+	if(dir == right){
+		pac.x += 1;
+	} else if(dir == up){
+		pac.y -= 1;
+	} else if(dir == down){
+		pac.y += 1;
+	} else {
+		// nothing
+	}
+} else if(pac.x == 7 && pac.y == 47){
+	if(dir == right){
+		pac.x += 1;
+	} else if(dir == up){
+		pac.y -= 1;
+	} else if(dir == down){
+		pac.y += 1;
+	} else {
+		// nothing
+	}
+} else if(pac.x == 81 && pac.y == 65){
+	if(dir == left){
+		pac.x -= 1;
+	} else if(dir == up){
+		pac.y -= 1;
+	} else {
+		// nothing
+	}
+} else if(pac.x == 112 && pac.y == 67){
+	if(dir == left){
+		pac.x -= 1;
+	} else if(dir == up){
+		pac.y -= 1;
+	} else {
+		// nothing
+	}
+} else if(pac.x == 7 && pac.y == 67){
+	if(dir == right){
+		pac.x += 1;
+	} else if(dir == up){
+		pac.y -= 1;
+	} else {
+		// nothing
+	}
+} else if(pac.x == 38 && pac.y == 65){
+	if(dir == right){
+		pac.x += 1;
+	} else if(dir == up){
+		pac.y -= 1;
+	} else {
+		// nothing
+	}
+} else if(24 < pac.x && pac.x < 96 && pac.y == 131){
+	if(dir == left){
+		pac.x -= 1;
+	} else if(dir == right){
+		pac.x += 1;
+	} else {
+		// nothing
+	}
+} else if(38 < pac.x && pac.x < 81 && pac.y == 79){
+	if(dir == left){
+		pac.x -= 1;
+	} else if(dir == right){
+		pac.x += 1;
+	} else {
+		// nothing
+	}
+} else if(7 < pac.x && pac.x < 47 && pac.y == 31){
+	if(dir == left){
+		pac.x -= 1;
+	} else if(dir == right){
+		pac.x += 1;
+	} else {
+		// nothing
+	}
+} else if(71 < pac.x && pac.x < 112 && pac.y == 31){
+	if(dir == left){
+		pac.x -= 1;
+	} else if(dir == right){
+		pac.x += 1;
+	} else {
+		// nothing
+	}
+} else if(7 < pac.x && pac.x < 112 && pac.y == 47){
+	if(dir == left){
+		pac.x -= 1;
+	} else if(dir == right){
+		pac.x += 1;
+	} else {
+		// nothing
+	}
+} else if(-8 < pac.x && pac.x < 38 && pac.y == 92){	// IMPORTANT LEFT TELEPORT EDGE
+	if(dir == left){
+		pac.x -= 1;
+	} else if(dir == right){
+		pac.x += 1;
+	} else {
+		// nothing
+	}
+} else if(81 < pac.x && pac.x < 127 && pac.y == 92){	// IMPORTANT RIGHT TELEPORT EDGE
+	if(dir == left){
+		pac.x -= 1;
+	} else if(dir == right){
+		pac.x += 1;
+	} else {
+		// nothing
+	}
+} else if(38 < pac.x && pac.x < 81 && pac.y == 104){
+	if(dir == left){
+		pac.x -= 1;
+	} else if(dir == right){
+		pac.x += 1;
+	} else {
+		// nothing
+	}
+} else if(7 < pac.x && pac.x < 20 && pac.y == 67){
+	if(dir == left){
+		pac.x -= 1;
+	} else if(dir == right){
+		pac.x += 1;
+	} else {
+		// nothing
+	}
+} else if(99 < pac.x && pac.x < 112 && pac.y == 67){
+	if(dir == left){
+		pac.x -= 1;
+	} else if(dir == right){
+		pac.x += 1;
+	} else {
+		// nothing
+	}
+} else if(38 < pac.x && pac.x < 47 && pac.y == 65){
+	if(dir == left){
+		pac.x -= 1;
+	} else if(dir == right){
+		pac.x += 1;
+	} else {
+		// nothing
+	}
+} else if(72 < pac.x && pac.x < 81 && pac.y == 65){
+	if(dir == left){
+		pac.x -= 1;
+	} else if(dir == right){
+		pac.x += 1;
+	} else {
+		// nothing
+	}
+} else if(pac.x == 24 && 131 < y && pac.y < 152){
+	if(dir == up){
+		pac.y -= 1;
+	} else if(dir == down){
+		pac.y += 1;
+	} else {
+		// nothing
+	}
+} else if(pac.x == 47 && 131 < y && pac.y < 152){
+	if(dir == up){
+		pac.y -= 1;
+	} else if(dir == down){
+		pac.y += 1;
+	} else {
+		// nothing
+	}
+} else if(pac.x == 72 && 131 < y && pac.y < 152){
+	if(dir == up){
+		pac.y -= 1;
+	} else if(dir == down){
+		pac.y += 1;
+	} else {
+		// nothing
+	}
+} else if(pac.x == 95 && 131 < y && pac.y < 152){
+	if(dir == up){
+		pac.y -= 1;
+	} else if(dir == down){
+		pac.y += 1;
+	} else {
+		// nothing
+	}
+} else if(pac.x == 38 && 79 < y && pac.y < 131){
+	if(dir == up){
+		pac.y -= 1;
+	} else if(dir == down){
+		pac.y += 1;
+	} else {
+		// nothing
+	}
+} else if(pac.x == 81 && 79 < y && pac.y < 131){
+	if(dir == up){
+		pac.y -= 1;
+	} else if(dir == down){
+		pac.y += 1;
+	} else {
+		// nothing
+	}
+} else if(pac.x == 99 && 67 < y && pac.y < 117){
+	if(dir == up){
+		pac.y -= 1;
+	} else if(dir == down){
+		pac.y += 1;
+	} else {
+		// nothing
+	}
+} else if(pac.x == 20 && 67 < y && pac.y < 117){
+	if(dir == up){
+		pac.y -= 1;
+	} else if(dir == down){
+		pac.y += 1;
+	} else {
+		// nothing
+	}
+} else if(pac.x == 7 && 31 < y && pac.y < 67){
+	if(dir == up){
+		pac.y -= 1;
+	} else if(dir == down){
+		pac.y += 1;
+	} else {
+		// nothing
+	}
+} else if(pac.x == 112 && 31 < y && pac.y < 67){
+	if(dir == up){
+		pac.y -= 1;
+	} else if(dir == down){
+		pac.y += 1;
+	} else {
+		// nothing
+	}
+} else if(pac.x == 47 && 31 < y && pac.y < 47){
+	if(dir == up){
+		pac.y -= 1;
+	} else if(dir == down){
+		pac.y += 1;
+	} else {
+		// nothing
+	}
+} else if(pac.x == 72 && 31 < y && pac.y < 47){
+	if(dir == up){
+		pac.y -= 1;
+	} else if(dir == down){
+		pac.y += 1;
+	} else {
+		// nothing
+	}
+} else if(pac.x == 38 && 47 < y && pac.y < 65){
+	if(dir == up){
+		pac.y -= 1;
+	} else if(dir == down){
+		pac.y += 1;
+	} else {
+		// nothing
+	}
+} else if(pac.x == 81 && 47 < y && pac.y < 65){
+	if(dir == up){
+		pac.y -= 1;
+	} else if(dir == down){
+		pac.y += 1;
+	} else {
+		// nothing
+	}
+} else if(pac.x == 47 && 65 < y && pac.y < 79){
+	if(dir == up){
+		pac.y -= 1;
+	} else if(dir == down){
+		pac.y += 1;
+	} else {
+		// nothing
+	}
+} else if(pac.x == 72 && 65 < y && pac.y < 79){
+	if(dir == up){
+		pac.y -= 1;
+	} else if(dir == down){
+		pac.y += 1;
+	} else {
+		// nothing
+	}
+}

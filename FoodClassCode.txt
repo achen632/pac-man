@@ -1,0 +1,184 @@
+/////////
+/////////
+//00000//
+//0///0//
+//0/8/0//
+//0///0//
+//00000//
+/////////
+/////////
+
+Food Class Code:
+
+class Food{
+    private:
+    int16_t x;
+    int16_t y;
+    bool isThere;
+    public:
+    Food(int16_t xpos, int16_t ypos){
+      x = xpos;
+      y = ypos;
+      isThere = true;
+    }
+    int16_t getX(void){
+      return this->x;
+    }
+    int16_t getY(void){
+      return this->y;
+    }
+    bool getIsThere(void){
+      return this->isThere;
+    }
+    bool checkFoodCollision(int32_t objX, int32_t objY){
+        if(((((int16_t)objX + 2) < this->x) && (((int16_t)objX + 6) > this->x)) && ((((int16_t)objY - 2) > this->y) && (((int16_t)objY - 6) < this->y))){
+            this->isThere = false;
+        }
+        return true;
+    }
+};
+
+Food all_food[118] = {
+        Food(11, 27),
+        Food(19, 27),
+        Food(26, 27),
+        Food(34, 27),
+        Food(42, 27),
+        Food(51, 27),
+        Food(76, 27),
+        Food(85, 27),
+        Food(93, 27),
+        Food(101, 27),
+        Food(108, 27),
+        Food(116, 27),
+
+        Food(11, 35),
+        Food(51, 35),
+        Food(76, 35),
+        Food(116, 35),
+
+        Food(11, 43),
+        Food(19, 43),
+        Food(26, 43),
+        Food(34, 43),
+        Food(42, 43),
+        Food(51, 43),
+        Food(59, 43),
+        Food(68, 43),
+        Food(76, 43),
+        Food(85, 43),
+        Food(93, 43),
+        Food(101, 43),
+        Food(108, 43),
+        Food(116, 43),
+
+        Food(11, 52),
+        Food(42, 52),
+        Food(85, 52),
+        Food(116, 52),
+
+        Food(42, 61),
+        Food(51, 61),
+        Food(76, 61),
+        Food(85, 61),
+
+        Food(11, 63),
+        Food(24, 63),
+        Food(103, 63),
+        Food(116, 63),
+
+        Food(24, 71),
+        Food(103, 71),
+
+        Food(42, 75),
+        Food(51, 75),
+        Food(59, 75),
+        Food(68, 75),
+        Food(76, 75),
+        Food(85, 75),
+
+        Food(24, 79),
+        Food(103, 79),
+
+        Food(6, 88),
+        Food(15, 88),
+        Food(24, 88),
+        Food(33, 88),
+        Food(42, 88),
+        Food(85, 88),
+        Food(94, 88),
+        Food(103, 88),
+        Food(112, 88),
+        Food(121, 88),
+
+        Food(24, 100),
+        Food(42, 100),
+        Food(51, 100),
+        Food(76, 100),
+        Food(85, 100),
+        Food(103, 100),
+
+        Food(11, 113),
+        Food(17, 113),
+        Food(24, 113),
+        Food(33, 113),
+        Food(42, 113),
+        Food(85, 113),
+        Food(94, 113),
+        Food(103, 113),
+        Food(110, 113),
+        Food(116, 113),
+
+        Food(11, 120),
+        Food(116, 120),
+
+        Food(11, 127),
+        Food(28, 127),
+        Food(35, 127),
+        Food(42, 127),
+        Food(51, 127),
+        Food(59, 127),
+        Food(68, 127),
+        Food(76, 127),
+        Food(85, 127),
+        Food(92, 127),
+        Food(99, 127),
+        Food(116, 127),
+
+        Food(11, 134),
+        Food(28, 134),
+        Food(51, 134),
+        Food(76, 134),
+        Food(99, 134),
+        Food(116, 134),
+
+        Food(11, 141),
+        Food(28, 141),
+        Food(51, 141),
+        Food(76, 141),
+        Food(99, 141),
+        Food(116, 141),
+
+        Food(11, 148),
+        Food(19, 148),
+        Food(28, 148),
+        Food(36, 148),
+        Food(43, 148),
+        Food(51, 148),
+        Food(59, 148),
+        Food(68, 148),
+        Food(76, 148),
+        Food(84, 148),
+        Food(91, 148),
+        Food(99, 148),
+        Food(108, 148),
+        Food(116, 148)
+};
+
+void drawFood(void){
+  for(int i = 0; i < 118; i++){
+    if(all_food[i].getIsThere()){  
+      ST7735_DrawPixel(all_food[i].getX(), all_food[i].getY(), 0xFFE0);
+    }
+  }
+}

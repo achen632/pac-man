@@ -1,0 +1,735 @@
+bool canMove(dir_t dir){
+if(this->x == 7 && this->y == 152){
+	if(dir == up){
+		return true;
+	} else if(dir == right){
+		return true;
+	} else {
+		// nothing
+	}
+} else if(7 < this->x && this->x < 24 && this->y == 152){
+	if(dir == right){
+		return true;
+	} else if(dir == left){
+		return true;
+	} else {
+		// nothing
+	}
+} else if(this->x == 24 && this->y == 152){
+	if(dir == up){
+		return true;
+	} else if(dir == right){
+		return true;
+	} else if(dir == left){
+		return true;
+	} else {
+		// nothing
+	}
+} else if(24 < this->x && this->x < 47 && this->y == 152){
+	if(dir == right){
+		return true;
+	} else if(dir == left){
+		return true;
+	} else {
+		// nothing
+	}
+} else if(this->x == 47 && this->y == 152){
+	if(dir == up){
+		return true;
+	} else if(dir == right){
+		return true;
+	} else if(dir == left){
+		return true;
+	} else {
+		// nothing
+	}
+} else if(47 < this->x && this->x < 72 && this->y == 152){
+	if(dir == right){
+		return true;
+	} else if(dir == left){
+		return true;
+	} else {
+		// nothing
+	}
+} else if(this->x == 72 && this->y == 152){
+	if(dir == up){
+		return true;
+	} else if(dir == right){
+		return true;
+	} else if(dir == left){
+		return true;
+	} else {
+		// nothing
+	}
+} else if(72 < this->x && this->x < 96 && this->y == 152){
+	if(dir == right){
+		return true;
+	} else if(dir == left){
+		return true;
+	} else {
+		// nothing
+	}
+} else if(this->x == 96 && this->y == 152){
+	if(dir == up){
+		return true;
+	} else if(dir == right){
+		return true;
+	} else if(dir == left){
+		return true;
+	} else {
+		// nothing
+	}
+} else if(96 < this->x && this->x < 112 && this->y == 152){
+	if(dir == right){
+		return true;
+	} else if(dir == left){
+		return true;
+	} else {
+		// nothing
+	}
+} else if(this->x == 112 && this->y == 152){
+	if(dir == up){
+		return true;
+	} else if(dir == left){
+		return true;
+	} else {
+		// nothing
+	}
+} else if(this->x == 112 && 117 < this->y && this->y < 152){
+	if(dir == up){
+		return true;
+	} else if(dir == down){
+		return true;
+	} else {
+		// nothing
+	}
+} else if(this->x == 112 && this->y == 117){
+	if(dir == down){
+		return true;
+	} else if(dir == left){
+		return true;
+	} else {
+		// nothing
+	}
+} else if(99 < this->x && this->x < 112 && this->y == 117){
+	if(dir == right){
+		return true;
+	} else if(dir == left){
+		return true;
+	} else {
+		// nothing
+	}
+} else if(this->x == 99 && this->y == 117){
+	if(dir == up){
+		return true;
+	} else if(dir == right){
+		return true;
+	} else if(dir == left){
+		return true;
+	} else {
+		// nothing
+	}
+} else if(81 < this->x && this->x < 99 && this->y == 117){
+	if(dir == right){
+		return true;
+	} else if(dir == left){
+		return true;
+	} else {
+		// nothing
+	}
+} else if(this->x == 81 && this->y == 117){
+	if(dir == up){
+		return true;
+	} else if(dir == down){
+		return true;
+	} else if(dir == right){
+		return true;
+	} else {
+		// nothing
+	}
+} else if(this->x == 38 && this->y == 117){
+	if(dir == up){
+		return true;
+	} else if(dir == down){
+		return true;
+	} else if(dir == left){
+		return true;
+	} else {
+		// nothing
+	}
+} else if(20 < this->x && this->x < 38 && this->y == 117){
+	if(dir == right){
+		return true;
+	} else if(dir == left){
+		return true;
+	} else {
+		// nothing
+	}
+} else if(this->x == 20 && this->y == 117){
+	if(dir == up){
+		return true;
+	} else if(dir == right){
+		return true;
+	} else if(dir == left){
+		return true;
+	} else {
+		// nothing
+	}
+} else if(7 < this->x && this->x < 20 && this->y == 117){
+	if(dir == right){
+		return true;
+	} else if(dir == left){
+		return true;
+	} else {
+		// nothing
+	}
+} else if(this->x == 7 && this->y == 117){
+	if(dir == right){
+		return true;
+	} else if(dir == down){
+		return true;
+	} else {
+		// nothing
+	}
+} else if(this->x == 7 && 117 < this->y && this->y < 152){
+	if(dir == up){
+		return true;
+	} else if(dir == down){
+		return true;
+	} else {
+		// nothing
+	}
+} else if(this->x == 7 && this->y == 31){
+	if(dir == right){
+		return true;
+	} else if(dir == down){
+		return true;
+	} else {
+		// nothing
+	}
+} else if(this->x == 47 && this->y == 31){
+	if(dir == left){
+		return true;
+	} else if(dir == down){
+		return true;
+	} else {
+		// nothing
+	}
+} else if(this->x == 47 && this->y == 47){
+	if(dir == up){
+		return true;
+	} else if(dir == right){
+		return true;
+	} else if(dir == left){
+		return true;
+	} else {
+		// nothing
+	}
+} else if(this->x == 72 && this->y == 47){
+	if(dir == up){
+		return true;
+	} else if(dir == right){
+		return true;
+	} else if(dir == left){
+		return true;
+	} else {
+		// nothing
+	}
+} else if(this->x == 72 && this->y == 31){
+	if(dir == right){
+		return true;
+	} else if(dir == down){
+		return true;
+	} else {
+		// nothing
+	}
+} else if(this->x == 72 && this->y == 65){
+	if(dir == right){
+		return true;
+	} else if(dir == down){
+		return true;
+	} else {
+		// nothing
+	}
+} else if(this->x == 38 && this->y == 79){
+	if(dir == right){
+		return true;
+	} else if(dir == down){
+		return true;
+	} else {
+		// nothing
+	}
+} else if(this->x == 99 && this->y == 69){
+	if(dir == right){
+		return true;
+	} else if(dir == down){
+		return true;
+	} else {
+		// nothing
+	}
+} else if(this->x == 112 && this->y == 31){
+	if(dir == left){
+		return true;
+	} else if(dir == down){
+		return true;
+	} else {
+		// nothing
+	}
+} else if(this->x == 47 && this->y == 65){
+	if(dir == left){
+		return true;
+	} else if(dir == down){
+		return true;
+	} else {
+		// nothing
+	}
+} else if(this->x == 95 && this->y == 131){
+	if(dir == left){
+		return true;
+	} else if(dir == down){
+		return true;
+	} else {
+		// nothing
+	}
+} else if(this->x == 24 && this->y == 131){
+	if(dir == right){
+		return true;
+	} else if(dir == down){
+		return true;
+	} else {
+		// nothing
+	}
+} else if(this->x == 20 && this->y == 67){
+	if(dir == left){
+		return true;
+	} else if(dir == down){
+		return true;
+	} else {
+		// nothing
+	}
+} else if(this->x == 81 && this->y == 79){
+	if(dir == left){
+		return true;
+	} else if(dir == down){
+		return true;
+	} else {
+		// nothing
+	}
+} else if(this->x == 20 && this->y == 92){
+	if(dir == left){
+		return true;
+	} else if(dir == right){
+		return true;
+	} else if(dir == up){
+		return true;
+	} else if(dir == down){
+		return true;
+	}
+} else if(this->x == 99 && this->y == 92){
+	if(dir == left){
+		return true;
+	} else if(dir == right){
+		return true;
+	} else if(dir == up){
+		return true;
+	} else if(dir == down){
+		return true;
+	}
+} else if(this->x == 38 && this->y == 131){
+	if(dir == left){
+		return true;
+	} else if(dir == right){
+		return true;
+	} else if(dir == up){
+		return true;
+	} else {
+		// nothing
+	}
+} else if(this->x == 81 && this->y == 131){
+	if(dir == left){
+		return true;
+	} else if(dir == right){
+		return true;
+	} else if(dir == up){
+		return true;
+	} else {
+		// nothing
+	}
+} else if(this->x == 72 && this->y == 79){
+	if(dir == left){
+		return true;
+	} else if(dir == right){
+		return true;
+	} else if(dir == up){
+		return true;
+	} else {
+		// nothing
+	}
+} else if(this->x == 47 && this->y == 79){
+	if(dir == left){
+		return true;
+	} else if(dir == right){
+		return true;
+	} else if(dir == up){
+		return true;
+	} else {
+		// nothing
+	}
+} else if(this->x == 38 && this->y == 47){
+	if(dir == left){
+		return true;
+	} else if(dir == right){
+		return true;
+	} else if(dir == down){
+		return true;
+	} else {
+		// nothing
+	}
+} else if(this->x == 81 && this->y == 47){
+	if(dir == left){
+		return true;
+	} else if(dir == right){
+		return true;
+	} else if(dir == down){
+		return true;
+	} else {
+		// nothing
+	}
+} else if(this->x == 47 && this->y == 131){
+	if(dir == left){
+		return true;
+	} else if(dir == right){
+		return true;
+	} else if(dir == down){
+		return true;
+	} else {
+		// nothing
+	}
+} else if(this->x == 72 && this->y == 131){
+	if(dir == left){
+		return true;
+	} else if(dir == right){
+		return true;
+	} else if(dir == down){
+		return true;
+	} else {
+		// nothing
+	}
+} else if(this->x == 112 && this->y == 47){
+	if(dir == left){
+		return true;
+	} else if(dir == up){
+		return true;
+	} else if(dir == down){
+		return true;
+	} else {
+		// nothing
+	}
+} else if(this->x == 38 && this->y == 92){
+	if(dir == left){
+		return true;
+	} else if(dir == up){
+		return true;
+	} else if(dir == down){
+		return true;
+	} else {
+		// nothing
+	}
+} else if(this->x == 81 && this->y == 104){
+	if(dir == left){
+		return true;
+	} else if(dir == up){
+		return true;
+	} else if(dir == down){
+		return true;
+	} else {
+		// nothing
+	}
+} else if(this->x == 39 && this->y == 104){
+	if(dir == right){
+		return true;
+	} else if(dir == up){
+		return true;
+	} else if(dir == down){
+		return true;
+	} else {
+		// nothing
+	}
+} else if(this->x == 81 && this->y == 92){
+	if(dir == right){
+		return true;
+	} else if(dir == up){
+		return true;
+	} else if(dir == down){
+		return true;
+	} else {
+		// nothing
+	}
+} else if(this->x == 7 && this->y == 47){
+	if(dir == right){
+		return true;
+	} else if(dir == up){
+		return true;
+	} else if(dir == down){
+		return true;
+	} else {
+		// nothing
+	}
+} else if(this->x == 81 && this->y == 65){
+	if(dir == left){
+		return true;
+	} else if(dir == up){
+		return true;
+	} else {
+		// nothing
+	}
+} else if(this->x == 112 && this->y == 67){
+	if(dir == left){
+		return true;
+	} else if(dir == up){
+		return true;
+	} else {
+		// nothing
+	}
+} else if(this->x == 7 && this->y == 67){
+	if(dir == right){
+		return true;
+	} else if(dir == up){
+		return true;
+	} else {
+		// nothing
+	}
+} else if(this->x == 38 && this->y == 65){
+	if(dir == right){
+		return true;
+	} else if(dir == up){
+		return true;
+	} else {
+		// nothing
+	}
+} else if(24 < this->x && this->x < 96 && this->y == 131){
+	if(dir == left){
+		return true;
+	} else if(dir == right){
+		return true;
+	} else {
+		// nothing
+	}
+} else if(38 < this->x && this->x < 81 && this->y == 79){
+	if(dir == left){
+		return true;
+	} else if(dir == right){
+		return true;
+	} else {
+		// nothing
+	}
+} else if(7 < this->x && this->x < 47 && this->y == 31){
+	if(dir == left){
+		return true;
+	} else if(dir == right){
+		return true;
+	} else {
+		// nothing
+	}
+} else if(71 < this->x && this->x < 112 && this->y == 31){
+	if(dir == left){
+		return true;
+	} else if(dir == right){
+		return true;
+	} else {
+		// nothing
+	}
+} else if(7 < this->x && this->x < 112 && this->y == 47){
+	if(dir == left){
+		return true;
+	} else if(dir == right){
+		return true;
+	} else {
+		// nothing
+	}
+} else if(-8 < this->x && this->x < 38 && this->y == 92){	// IMPORTANT LEFT TELEPORT EDGE
+	if(dir == left){
+		return true;
+	} else if(dir == right){
+		return true;
+	} else {
+		// nothing
+	}
+} else if(81 < this->x && this->x < 127 && this->y == 92){	// IMPORTANT RIGHT TELEPORT EDGE
+	if(dir == left){
+		return true;
+	} else if(dir == right){
+		return true;
+	} else {
+		// nothing
+	}
+} else if(38 < this->x && this->x < 81 && this->y == 104){
+	if(dir == left){
+		return true;
+	} else if(dir == right){
+		return true;
+	} else {
+		// nothing
+	}
+} else if(7 < this->x && this->x < 20 && this->y == 67){
+	if(dir == left){
+		return true;
+	} else if(dir == right){
+		return true;
+	} else {
+		// nothing
+	}
+} else if(99 < this->x && this->x < 112 && this->y == 67){
+	if(dir == left){
+		return true;
+	} else if(dir == right){
+		return true;
+	} else {
+		// nothing
+	}
+} else if(38 < this->x && this->x < 47 && this->y == 65){
+	if(dir == left){
+		return true;
+	} else if(dir == right){
+		return true;
+	} else {
+		// nothing
+	}
+} else if(72 < this->x && this->x < 81 && this->y == 65){
+	if(dir == left){
+		return true;
+	} else if(dir == right){
+		return true;
+	} else {
+		// nothing
+	}
+} else if(this->x == 24 && 131 < y && this->y < 152){
+	if(dir == up){
+		return true;
+	} else if(dir == down){
+		return true;
+	} else {
+		// nothing
+	}
+} else if(this->x == 47 && 131 < y && this->y < 152){
+	if(dir == up){
+		return true;
+	} else if(dir == down){
+		return true;
+	} else {
+		// nothing
+	}
+} else if(this->x == 72 && 131 < y && this->y < 152){
+	if(dir == up){
+		return true;
+	} else if(dir == down){
+		return true;
+	} else {
+		// nothing
+	}
+} else if(this->x == 95 && 131 < y && this->y < 152){
+	if(dir == up){
+		return true;
+	} else if(dir == down){
+		return true;
+	} else {
+		// nothing
+	}
+} else if(this->x == 38 && 79 < y && this->y < 131){
+	if(dir == up){
+		return true;
+	} else if(dir == down){
+		return true;
+	} else {
+		// nothing
+	}
+} else if(this->x == 81 && 79 < y && this->y < 131){
+	if(dir == up){
+		return true;
+	} else if(dir == down){
+		return true;
+	} else {
+		// nothing
+	}
+} else if(this->x == 99 && 67 < y && this->y < 117){
+	if(dir == up){
+		return true;
+	} else if(dir == down){
+		return true;
+	} else {
+		// nothing
+	}
+} else if(this->x == 20 && 67 < y && this->y < 117){
+	if(dir == up){
+		return true;
+	} else if(dir == down){
+		return true;
+	} else {
+		// nothing
+	}
+} else if(this->x == 7 && 31 < y && this->y < 67){
+	if(dir == up){
+		return true;
+	} else if(dir == down){
+		return true;
+	} else {
+		// nothing
+	}
+} else if(this->x == 112 && 31 < y && this->y < 67){
+	if(dir == up){
+		return true;
+	} else if(dir == down){
+		return true;
+	} else {
+		// nothing
+	}
+} else if(this->x == 47 && 31 < y && this->y < 47){
+	if(dir == up){
+		return true;
+	} else if(dir == down){
+		return true;
+	} else {
+		// nothing
+	}
+} else if(this->x == 72 && 31 < y && this->y < 47){
+	if(dir == up){
+		return true;
+	} else if(dir == down){
+		return true;
+	} else {
+		// nothing
+	}
+} else if(this->x == 38 && 47 < y && this->y < 65){
+	if(dir == up){
+		return true;
+	} else if(dir == down){
+		return true;
+	} else {
+		// nothing
+	}
+} else if(this->x == 81 && 47 < y && this->y < 65){
+	if(dir == up){
+		return true;
+	} else if(dir == down){
+		return true;
+	} else {
+		// nothing
+	}
+} else if(this->x == 47 && 65 < y && this->y < 79){
+	if(dir == up){
+		return true;
+	} else if(dir == down){
+		return true;
+	} else {
+		// nothing
+	}
+} else if(this->x == 72 && 65 < y && this->y < 79){
+	if(dir == up){
+		return true;
+	} else if(dir == down){
+		return true;
+	} else {
+		// nothing
+	}
+}
+}

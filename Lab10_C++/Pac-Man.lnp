@@ -1,0 +1,23 @@
+--cpu=Cortex-M4 --fpu=SoftVFP
+".\startup_tm4c123.o"
+".\dac.o"
+".\pll.o"
+".\random.o"
+".\st7735.o"
+".\slidepot.o"
+".\sound.o"
+".\timer0.o"
+".\timer1.o"
+".\uart.o"
+".\fifo.o"
+".\texas.o"
+".\character.o"
+".\edgetrigger.o"
+".\pac-man.o"
+".\sprite.o"
+".\ghost.o"
+".\food.o"
+--strict --scatter ".\Pac-Man.sct"
+--summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list ".\Pac-Man.map" -o .\Pac-Man.axf

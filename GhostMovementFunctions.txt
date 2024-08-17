@@ -1,0 +1,164 @@
+int32_t Sprite::Distance(int32_t pacX, int32_t pacY, dir_t ghostDir){
+    int32_t deltaX = (pacX - this->x);
+    int32_t deltaY = (pacY - this->y);
+
+    int32_t dLeft = pacX - (this->x - 1);
+    int32_t dRight = pacX - (this->x + 1);
+    int32_t dUp = pacY - (this->y - 1);
+    int32_t dDown = pacY - (this->y + 1);
+
+    if(ghostDir == left){
+        return (dLeft * dLeft) + (deltaY * deltaY);
+    } else if(ghostDir == right){
+        return (dRight * dRight) + (deltaY * deltaY);
+    } else if(ghostDir == up){
+        return (deltaX * deltaX) + (dUp * dUp);
+    } else {
+        return (deltaX * deltaX) + (dDown * dDown);
+    }
+}
+
+dir_t Sprite::findMin(int32_t d1, int32_t d2, int32_t d3){
+    if(d1 <= d2 && d1 <= d3){
+        return (dir_t)((((int)dir - 1) < 0 ? (dir_t) 3 : ((int)dir - 1)) % 4);
+    } else if(d2 <= d1 && d2 <= d3){
+        return this->dir;
+    } else {
+        return (dir_t)((dir + 1) % 4);
+    }
+}
+dir_t Sprite::RedGhostDir(int32_t pacX, int32_t pacY){
+		int32_t deltaX = x - pacX;
+		int32_t deltaY = y - pacY;
+	
+		int32_t absDeltaX = deltaX < 0 ? deltaX * -1 : deltaX;
+		int32_t absDeltaY = deltaY < 0 ? deltaY * -1 : deltaY;
+	
+		int32_t maxInt32Val = 2147483647;
+		int32_t one = maxInt32Val, two = maxInt32Val, three = maxInt32Val;
+	
+		if(CanMove((dir_t)((((int)dir - 1) < 0 ? (dir_t) 3 : ((int)dir - 1)) % 4))) one = Distance(pacX, pacY, (dir_t)((((int)dir - 1) < 0 ? (dir_t) 3 : ((int)dir - 1)) % 4));
+		if(CanMove((dir_t)(((int)dir - 0) % 4))) two = Distance(pacX, pacY, (dir_t)(((int)dir - 0) % 4));
+		if(CanMove((dir_t)(((int)dir + 1) % 4))) three = Distance(pacX, pacY, (dir_t)(((int)dir + 1) % 4));
+	
+		this->dir = findMin(one, two, three);
+		this->nextDir = dir;
+}
+dir_t Sprite::PinkGhostDir(int32_t pacX, int32_t pacY, dir_t pacDir){
+	if(pacDir == left){
+		return RedGhostDir(pacX - 10, pacY);
+	} else if(pacDir == right){
+		return RedGhostDir(pacX + 10, pacY);
+	} else if(pacDir == up){
+		return RedGhostDir(pacX, pacY - 10);
+	} else if(pacDir == down){
+		return RedGhostDir(pacX, pacY + 10);
+	}
+}
+dir_t Sprite::BlueGhostDir(int32_t pacX, int32_t pacY, dir_t pacDir, int32_t redX, int32_t redY){
+		int32_t pinkTargetX;
+		int32_t pinkTargetY;
+		if(pacDir == left){
+			int32_t pinkTargetX = pacX - 10;
+			int32_t pinkTargetY = pacY;
+		} else if(pacDir == right){
+			int32_t pinkTargetX = pacX + 10;
+			int32_t pinkTargetY = pacY;
+		} else if(pacDir == up){
+			int32_t pinkTargetX = pacX;
+			int32_t pinkTargetY = pacY - 10;
+		} else if(pacDir == down){
+			int32_t pinkTargetX = pacX;
+			int32_t pinkTargetY = pacY + 10;
+		}
+		int32_t blueTargetX = (2*(redX - pinkTargetX)) + pinkTargetX;
+		int32_t blueTargetY = (2*(redY - pinkTargetY)) + pinkTargetY;
+		
+		return RedGhostDir(blueTargetX, blueTargetY);
+}
+dir_t Sprite::YellowGhostDir(int32_t pacX, int32_t pacY){
+		
+		int32_t deltaX = x - pacX;
+		int32_t deltaY = y - pacY;
+
+		deltaX = deltaX < 0 ? deltaX - 20 : deltaX + 20;
+		deltaY = deltaY < 0 ? deltaY - 20 : deltaY + 20;
+	
+		int32_t absDeltaX = deltaX < 0 ? deltaX * -1 : deltaX;
+		int32_t absDeltaY = deltaY < 0 ? deltaY * -1 : deltaY;
+	
+		int32_t maxInt32Val = 2147483647;
+		int32_t one = maxInt32Val, two = maxInt32Val, three = maxInt32Val;
+	
+		if(CanMove((dir_t)((((int)dir - 1) < 0 ? (dir_t) 3 : ((int)dir - 1)) % 4))) one = Distance(pacX, pacY, (dir_t)((((int)dir - 1) < 0 ? (dir_t) 3 : ((int)dir - 1)) % 4));
+		if(CanMove((dir_t)(((int)dir - 0) % 4))) two = Distance(pacX, pacY, (dir_t)(((int)dir - 0) % 4));
+		if(CanMove((dir_t)(((int)dir + 1) % 4))) three = Distance(pacX, pacY, (dir_t)(((int)dir + 1) % 4));
+	
+		this->dir = findMin(one, two, three);
+		this->nextDir = dir;
+}
+
+
+/// Ignore the functions bellow! ///
+
+
+dir_t Sprite::RedGhostScatterDir(){
+	// upper-right corner
+	int32_t deltaX = (((128 - this->x)*1000)/128);
+	int32_t deltaY = (((0 - this->y)*1000)/160);
+
+	if((deltaX < deltaY) && (this->CanMove(right) && (deltaX > 0)){
+			return right;
+	} else if((deltaX < deltaY) && (this->CanMove(left) && (deltaX < 0)){
+			return left;
+	} else if((deltaX >= deltaY) && (this->CanMove(down) && (deltaY > 0)){
+			return down;
+	} else if((deltaX >= deltaY) && (this->CanMove(up) && (deltaY < 0)){
+			return up;
+	}
+}
+dir_t Sprite::PinkGhostScatterDir(){
+	// upper-left corner
+	int32_t deltaX = (((0 - this->x)*1000)/128);
+	int32_t deltaY = (((0 - this->y)*1000)/160);
+
+	if((deltaX < deltaY) && (this->CanMove(right) && (deltaX > 0)){
+			return right;
+	} else if((deltaX < deltaY) && (this->CanMove(left) && (deltaX < 0)){
+			return left;
+	} else if((deltaX >= deltaY) && (this->CanMove(down) && (deltaY > 0)){
+			return down;
+	} else if((deltaX >= deltaY) && (this->CanMove(up) && (deltaY < 0)){
+			return up;
+	}
+}
+dir_t Sprite::BlueGhostScatterDir(){
+	// lower-right corner
+	int32_t deltaX = (((128 - this->x)*1000)/128);
+	int32_t deltaY = (((160 - this->y)*1000)/160);
+	
+	if((deltaX < deltaY) && (this->CanMove(right) && (deltaX > 0)){
+			return right;
+	} else if((deltaX < deltaY) && (this->CanMove(left) && (deltaX < 0)){
+			return left;
+	} else if((deltaX >= deltaY) && (this->CanMove(down) && (deltaY > 0)){
+			return down;
+	} else if((deltaX >= deltaY) && (this->CanMove(up) && (deltaY < 0)){
+			return up;
+	}
+}
+dir_t Sprite::YellowGhostScatterDir(){
+	// lower-left corner
+	int32_t deltaX = (((0 - this->x)*1000)/128);
+	int32_t deltaY = (((160 - this->y)*1000)/160);
+
+	if((deltaX < deltaY) && (this->CanMove(right) && (deltaX > 0)){
+			return right;
+	} else if((deltaX < deltaY) && (this->CanMove(left) && (deltaX < 0)){
+			return left;
+	} else if((deltaX >= deltaY) && (this->CanMove(down) && (deltaY > 0)){
+			return down;
+	} else if((deltaX >= deltaY) && (this->CanMove(up) && (deltaY < 0)){
+			return up;
+	}
+}
